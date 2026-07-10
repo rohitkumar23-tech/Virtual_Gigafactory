@@ -11,6 +11,3 @@ for file in files:
         count+=1
 print("found",count,"CSV Files")
 
-
-
-print("Nikhil is awesome")
