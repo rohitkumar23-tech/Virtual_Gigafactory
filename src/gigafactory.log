@@ -27,3 +27,30 @@ ERROR:root:The File doesn't exist
 2026-07-11 15:40:49,583,ERROR,The File is empty:../raw_data\batch_001.csv
 2026-07-11 15:40:49,583,ERROR,The File is empty:../raw_data\batch_002.csv
 2026-07-11 15:40:49,583,ERROR,The File is not a csv file:../raw_data\notes.txt
+2026-07-11 20:44:15,266,ERROR,The File is empty:../raw_data\batch_001.csv
+2026-07-11 20:44:15,267,ERROR,The File is empty:../raw_data\batch_002.csv
+2026-07-11 20:44:15,275,ERROR,The File is not a csv file:../raw_data\notes.txt
+2026-07-11 20:45:19,301,ERROR,The File is empty:../raw_data\batch_001.csv
+2026-07-11 20:45:19,301,ERROR,The File is empty:../raw_data\batch_002.csv
+2026-07-11 20:45:19,301,ERROR,The File is not a csv file:../raw_data\notes.txt
+2026-07-11 20:46:08,928,ERROR,The File is empty:../raw_data\batch_001.csv
+2026-07-11 20:46:08,928,ERROR,The File is empty:../raw_data\batch_002.csv
+2026-07-11 20:46:08,928,ERROR,The File is not a csv file:../raw_data\notes.txt
+2026-07-11 20:47:44,964,ERROR,The File is empty:../raw_data\batch_001.csv
+2026-07-11 20:47:44,964,ERROR,The File is empty:../raw_data\batch_002.csv
+2026-07-11 20:47:44,974,ERROR,The File is not a csv file:../raw_data\notes.txt
+2026-07-11 20:48:08,736,ERROR,The File is empty:../raw_data\batch_001.csv
+2026-07-11 20:48:08,736,ERROR,The File is empty:../raw_data\batch_002.csv
+2026-07-11 20:48:08,736,ERROR,The File is not a csv file:../raw_data\notes.txt
+2026-07-11 20:56:07,080,ERROR,The File is empty:../raw_data\batch_001.csv
+2026-07-11 20:56:07,080,ERROR,The File is empty:../raw_data\batch_002.csv
+2026-07-11 20:56:07,096,ERROR,The File is not a csv file:../raw_data\notes.txt
+2026-07-11 20:56:19,371,ERROR,The File is empty:../raw_data\batch_001.csv
+2026-07-11 20:56:19,371,ERROR,The File is empty:../raw_data\batch_002.csv
+2026-07-11 20:56:19,371,ERROR,The File is not a csv file:../raw_data\notes.txt
+2026-07-11 20:57:51,805,ERROR,The File is empty:../raw_data\batch_001.csv
+2026-07-11 20:57:51,805,ERROR,The File is empty:../raw_data\batch_002.csv
+2026-07-11 20:57:51,805,ERROR,The File is not a csv file:../raw_data\notes.txt
+2026-07-11 20:57:58,213,ERROR,The File is empty:../raw_data\batch_001.csv
+2026-07-11 20:57:58,215,ERROR,The File is empty:../raw_data\batch_002.csv
+2026-07-11 20:57:58,219,ERROR,The File is not a csv file:../raw_data\notes.txt
