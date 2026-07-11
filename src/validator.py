@@ -1,4 +1,3 @@
-
 import os 
 import pandas as pd
 
@@ -28,9 +27,23 @@ def is_csv(file_path):
         return False,"The file is not a csv file"
 
 def is_empty(file_path):
-    data=pd.read_csv(file_path)
-    if not data.empty:
-        return True, None
-    else:
-        return False,"The file is empty"
+    try:
+        data=pd.read_csv(file_path)
+        if not data.empty:
+            return True, None
+        else:
+            return False,"The file is empty"
+    except Exception:
+        return False,"Unable to read the CSV file"
+    
+def has_required_coloumns(file_path):
+    try:  
+        clm=['Voltage','Current','Temperature']
+        data=pd.read_csv(file_path) 
+        for header in clm:
+            if header not in data.columns:
+                return False,f"{header} does not exist"
+            return True,None
+    except Exception:
+        return False,"Unable to read the CSV"
 
