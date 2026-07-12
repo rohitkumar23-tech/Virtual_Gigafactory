@@ -1,8 +1,32 @@
+from config import report_width
+def print_section(text):
+        print(f"{'-'*report_width}\n")
+        print(f"{text.center(report_width)}\n")
+        print(f"{'-'*report_width}\n")
 def generate_report(pipeline_stats):
-    print("---------Pipeline Report---------")
-    print(f"Total Files      ={pipeline_stats['total_files']}")
-    print(f"Failed Files     ={len(pipeline_stats['failed_files'])}")
-    print(f"Successful Count ={pipeline_stats['successful_count']}")
-    print(f"Time Taken       ={pipeline_stats['total_time']}")
-    for file_name,error in pipeline_stats["failed_files"]:
-        print(f'File name: {file_name}--> Error:{error}')
+    
+    total_files=pipeline_stats['total_files']
+    failed_files=pipeline_stats['failed_files']
+    successful_files=pipeline_stats['successful_files']
+    time_taken=pipeline_stats['total_time']
+
+    title="PIPELINE SUMMARY"
+    print(f"{'='*report_width}\n") 
+    print(f"{title.center(report_width)}\n")
+    print(f"{'='*report_width}")
+    print_section("Summary")
+    print(f"Total Files      ={total_files}")
+    print(f"Failed Files     ={len(failed_files)}")
+    print(f"Successful Files ={len(successful_files)}")
+    print(f"Time Taken       ={time_taken:.2f} seconds")
+    
+    print_section("Failed Files")
+    if not failed_files:
+        print("There are no failed files.")
+    else:
+        for file_name,error in failed_files:
+            print(f'File name: {file_name}: Error:{error}\n')
+
+
+    
+

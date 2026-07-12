@@ -10,31 +10,29 @@ logging.basicConfig(filename=log_file,
                     format="%(asctime)s,%(levelname)s,%(message)s"
                     )
 
-failed_files=[]
-successful_count=0
-total_files=0
+pipeline_stats={
+    'failed_files':[],
+    'successful_files':[],
+    'total_files':0,
+    'total_time':0
+}
 directory_files=os.listdir(folder_path) 
 start_time=time.time()
 for file_name in directory_files:
     file_path=os.path.join(folder_path,file_name)
     valid,err=validate_file(file_path)
-    total_files+=1
+    pipeline_stats['total_files']+=1
     if not valid:
-        failed_files.append((file_name,err))
+        pipeline_stats['failed_files'].append((file_name,err))
         print(err)
         continue
 
     data=read_file(file_path)
-    successful_count+=1
+    pipeline_stats['successful_files'].append(file_name)
     print(data['Current'])
 
 end_time=time.time()
-total_time=end_time-start_time
-
-pipeline_stats={"total_files": total_files,
-                "successful_count":successful_count,
-                "failed_files":failed_files,
-                 "total_time":total_time }
+pipeline_stats['total_time']=end_time-start_time
 generate_report(pipeline_stats)
 
 
