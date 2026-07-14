@@ -43,7 +43,7 @@ for file_name in directory_files:
     output_path=os.path.join(Processed_data_folder,f"{name}_processed{extension}")
     write_file(data,output_path)
 
-    print(data['Current'])
+    # print(data['Current'])
 
 end_time=time.time()
 pipeline_stats['total_time']=end_time-start_time
